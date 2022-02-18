@@ -26,7 +26,10 @@
                     
                     <!-- income -->
                    <h4>Income</h4>
-                   <span>Income:</span> <input id="income-input" class="" type="number" placeholder="Type your income"></input> 
+                   <span>Income:</span> <input id="income-input" class="" type="text" placeholder="Type your income"></input> 
+                   <div id="string-emptyAlert" class="alert mt-4 d-none alert-danger" role="alert">
+                    Are you mad? plz give me number/value!!!!
+                </div>
 
                    <!-- Expenses -->
                         <div class="mt-4">
@@ -41,17 +44,26 @@
                           </div>
                         <button id="calculate-btn" class="ms-4 mb-4 btn btn-primary" >Calculate</button>
 
-            <!-- Total Expenses -->
-                         <h5>Total Expenses: <span id="total-ex" > </span></h5>
-                         <h5>Balance: <span id="balance"> </span></h5>
-                         <div id="negativealert" class="alert mt-4 d-none alert-danger" role="alert">
+                        <div id="negativealert" class="alert mt-4 d-none alert-danger" role="alert">
                             We only allow positive value!
                         </div>
                         <div id="alert" class="alert mt-4 d-none alert-danger" role="alert">
                             your monthly income is less than your expenses!
                           </div>
+
+            <!-- Total Expenses -->
+                         <h5>Total Expenses: <span id="total-ex" > </span></h5>
+                         <h5>Balance: <span id="balance"> </span></h5>
+                         
                <!-- save input & btn  -->
                          <span>Save:</span> <input id="save-input" class=" " type="number" placeholder="just give %"></input> % <button id="save-btn" class="btn btn-primary">Save</button>
+                         <div id="savingsnegativealert" class="alert mt-4 d-none alert-danger" role="alert">
+                            We only allow positive value!
+                        </div>
+                         <div id="string-emptyAlert" class="alert mt-4 d-none alert-danger" role="alert">
+                            Are you mad? plz give me number/value!!!!
+                        </div>
+
                 </main>
             </div>
         </div>
@@ -61,12 +73,16 @@
         <!-- final balance -->
         <footer class="text-center">
             <h6>Saving Amount:<span id="saving-amount" > </span></h6>
-            <div id="savingsnegativealert" class="alert mt-4 d-none alert-danger" role="alert">
+            
+            <h4>Remaining Balance:<span id="remaining-balance" > </span></h4>
+            <div id="negativealert" class="alert mt-4 d-none alert-danger" role="alert">
                 We only allow positive value!
             </div>
-            <h4>Remaining Balance:<span id="remaining-balance" > </span></h4>
             <div id="savingsalert" class="alert mt-4 d-none alert-danger" role="alert">
                 You dont have enough balance!
+            </div>
+            <div id="string-emptyAlert" class="alert mt-4 d-none alert-danger" role="alert">
+                Are you mad? plz give me number/value!!!!
             </div>
         </footer>
     </div>

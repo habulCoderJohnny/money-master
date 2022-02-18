@@ -25,7 +25,12 @@ function getData(id) {
     if (incomeInput < 0 || rentAmount < 0 || foodAmount < 0 || clothAmount < 0) {
        
      document.getElementById('negativealert').classList.remove('d-none');
-    }else if (totalExpense > incomeInput) {
+    }
+    else if (text = true) {
+      document.getElementById('string-emptyAlert').classList.remove('d-none');
+   }
+    
+    else if (totalExpense > incomeInput) {
      document.getElementById('alert').classList.remove('d-none');
     } else {
         addData('total-ex', totalExpense);
@@ -33,6 +38,8 @@ function getData(id) {
         document.getElementById('alert').classList.add('d-none');
         document.getElementById('negativealert').classList.add('d-none');
     }
+
+   
  })
     // income to balance end 
 
@@ -43,7 +50,12 @@ document.getElementById('save-btn').addEventListener('click', function() {
     const savings = (monthlyIncome/100) * getData('save-input');
    if (getData('save-input') < 0) {
     document.getElementById('savingsnegativealert').classList.remove('d-none');
-   }else{
+   }
+   else if (text = true) {
+      document.getElementById('string-emptyAlert').classList.remove('d-none');
+   }
+   
+   else{
     addData('saving-amount', savings);
     document.getElementById('savingsnegativealert').classList.add('d-none');
    }
@@ -53,8 +65,16 @@ document.getElementById('save-btn').addEventListener('click', function() {
    const balance = availableBalance - savings;
    if (savings > availableBalance) {
     document.getElementById('savingsalert').classList.remove('d-none');
-   } else{
+   }
+   else if (text = true) {
+      document.getElementById('string-emptyAlert').classList.remove('d-none');
+   }
+   
+   
+   else{
     addData('remaining-balance', balance);
     document.getElementById('savingsalert').classList.add('d-none');
    }
+
+   
  })
