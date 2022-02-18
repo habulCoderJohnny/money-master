@@ -10,7 +10,8 @@
 </head>
 <body>
     <header class="text-center mt-4">
-        <h2 class="fst-italic">Bachelor Money Savings</h2></header>
+        <u><h2 class="fst-italic text-secondary">Bachelor Money Savings</h2></u>
+        </header>
     
     <div class="container mt-5">
         
@@ -30,19 +31,19 @@
                    <!-- Expenses -->
                         <div class="mt-4">
                             <h4>Expenses</h4>
-                            <span>Food:</span><input id="food" class="ms-4  btn-outline-success" type="" placeholder="your food cost"></input> 
+                            <span>Food:</span><input id="food" class="ms-4  btn-outline-success" type="" placeholder="your food cost?"></input> 
                            </div>
                         <div class="mt-3"> 
-                            <span>Rent:</span><input id="rent" class="ms-4 btn-outline-success" type="" placeholder="your rent cost"></input>
+                            <span>Rent:</span><input id="rent" class="ms-4 btn-outline-success" type="" placeholder="your rent cost?"></input>
                         </div>
                           <div class="mt-4 mb-4">
-                            <span>Clothes:</span> <input id="cloth" class=" btn-outline-success" type="" placeholder="your clothes cost"></input>
+                            <span>Clothes:</span> <input id="cloth" class=" btn-outline-success" type="" placeholder="your clothes cost?"></input>
                           </div>
                         <button id="calculate-btn" class="ms-4 mb-4 btn btn-primary" >Calculate</button>
 
             <!-- Total Expenses -->
-                         <h5>Total Expenses: <span id="total-ex" >00</span></h5>
-                         <h5>Balance: <span id="balance">00</span></h5>
+                         <h5>Total Expenses: <span id="total-ex" > </span></h5>
+                         <h5>Balance: <span id="balance"> </span></h5>
                          <div id="negativealert" class="alert mt-4 d-none alert-danger" role="alert">
                             We only allow positive value!
                         </div>
@@ -59,11 +60,11 @@
 
         <!-- final balance -->
         <footer class="text-center">
-            <h6>Saving Amount:<span id="saving-amount" >00</span></h6>
+            <h6>Saving Amount:<span id="saving-amount" > </span></h6>
             <div id="savingsnegativealert" class="alert mt-4 d-none alert-danger" role="alert">
                 We only allow positive value!
             </div>
-            <h4>Remaining Balance:<span id="remaining-balance" >00</span></h4>
+            <h4>Remaining Balance:<span id="remaining-balance" > </span></h4>
             <div id="savingsalert" class="alert mt-4 d-none alert-danger" role="alert">
                 You dont have enough balance!
             </div>
