@@ -35,3 +35,26 @@ function getData(id) {
     }
  })
     // income to balance end 
+
+    
+//savings button 
+document.getElementById('save-btn').addEventListener('click', function() {
+    const monthlyIncome = getData('income-input');
+    const savings = (monthlyIncome/100) * getData('save-input');
+   if (getData('save-input') < 0) {
+    document.getElementById('savingsnegativealert').classList.remove('d-none');
+   }else{
+    addData('saving-amount', savings);
+    document.getElementById('savingsnegativealert').classList.add('d-none');
+   }
+ 
+ //total balance calculate
+   const availableBalance =parseInt(document.getElementById('balance').innerText);
+   const balance = availableBalance - savings;
+   if (savings > availableBalance) {
+    document.getElementById('savingsalert').classList.remove('d-none');
+   } else{
+    addData('remaining-balance', balance);
+    document.getElementById('savingsalert').classList.add('d-none');
+   }
+ })
