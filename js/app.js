@@ -26,10 +26,7 @@ function getData(id) {
        
      document.getElementById('negativealert').classList.remove('d-none');
     }
-    else if (text = true) {
-      document.getElementById('string-emptyAlert').classList.remove('d-none');
-   }
-    
+
     else if (totalExpense > incomeInput) {
      document.getElementById('alert').classList.remove('d-none');
     } else {
@@ -51,10 +48,7 @@ document.getElementById('save-btn').addEventListener('click', function() {
    if (getData('save-input') < 0) {
     document.getElementById('savingsnegativealert').classList.remove('d-none');
    }
-   else if (text = true) {
-      document.getElementById('string-emptyAlert').classList.remove('d-none');
-   }
-   
+
    else{
     addData('saving-amount', savings);
     document.getElementById('savingsnegativealert').classList.add('d-none');
@@ -66,10 +60,6 @@ document.getElementById('save-btn').addEventListener('click', function() {
    if (savings > availableBalance) {
     document.getElementById('savingsalert').classList.remove('d-none');
    }
-   else if (text = true) {
-      document.getElementById('string-emptyAlert').classList.remove('d-none');
-   }
-   
    
    else{
     addData('remaining-balance', balance);
